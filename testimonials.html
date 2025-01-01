@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Solutions</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="/static/photos/logo.jpg" alt="AI-Solutions"></a> AI-Solutions
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <div class="testimonials">
+        {% for t in testimonialsData %}
+        <div class="testimonial">
+            <img src="{{t.testi_icon}}" alt="Person 1" class="testimonial-icon">
+            <h3 class="testimonial-name">{{t.testi_name}}</h3>
+            <p class="testimonial-description">{{t.testi_des}}</p>
+            <div class="testimonial-rating">
+                {{t.testi_star}}
+            </div>
+        </div>
+    
+        {% comment %} <div class="testimonial">
+            <img src="icon2.png" alt="Person 2" class="testimonial-icon">
+            <h3 class="testimonial-name">Jane Smith</h3>
+            <div class="testimonial-rating">
+                ★★★★★
+            </div>
+            <p class="testimonial-description">A fantastic experience from start to finish. Will definitely use again!</p>
+        </div>
+        <div class="testimonial">
+            <img src="/static/photos/S2.webp" alt="Person 2" class="testimonial-icon">
+            <h3 class="testimonial-name">Jane Smith</h3>
+            <div class="testimonial-rating">
+                ★★★★★
+            </div>
+            <p class="testimonial-description">A fantastic experience from start to finish. Will definitely use again!</p>
+        </div> {% endcomment %}
+        {% endfor %}
+    </div>
+    
+
+
+
+    <img id="movable-image" src="/static/photos/chatbot.png" alt="Movable Image" width="200" <button class="chat-button"></button> 
+    <a href="/contact"><img id="movable-cont" src="/static/photos/contact-us-20.png" alt="movable-cont" width="200" <button class="contact-btn"></button></a>  
+    
+    <!-- <div class="chatbot">
+        <button class="chat-button">Chat with us 👋</button>
+        <button class="contact-btn"><a href="./Contact.html">📞</a></button>
+    </div> -->
+</main>
+<div class="last">
+    <h1><b>AI-Solutions</b></h1> <p>Tinkuney, Kathmandu, Nepal</p> <p>+977-9877654349</p>
+        <p>Sun to Fri - 10:00-17:00</p>
+</div>
+    <footer>
+       
+        <p>Copyright © 2024, University of Sunderland, Sudip Basnet</p>
+    </footer>
+
+    <script src="/static/js/Script.js"></script>
+</body>
+</html>

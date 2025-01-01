@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Solutions</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+    <body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="/static/photos/logo.jpg" alt="AI-Solutions"></a> AI-Solutions
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="padding: 20px;">
+                <section id="portfolio">
+                    <h1 class="our">Our Portfolio</h1>
+                    {% for l in portfoliosData %}
+                    <article class="portfolio-item">
+                        <h2>Client: {{l.p_icon}}</h2>
+                        <p>{{e.event_icon}}</p>
+                    </article>
+
+                    {% comment %} <article class="portfolio-item">
+                        <h2>Client: HealthCare AI</h2>
+                        <p>Developed an NLP-based chatbot that improved patient query resolution time by 40%.</p>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <h2>Client: AutoVision</h2>
+                        <p>Implemented image recognition technology for defect detection, reducing production errors by 20%.</p>
+                    </article> {% endcomment %}
+                    {% endfor %}
+                </section>
+        </main>
+
+        <div class="last">
+            <h1><b>AI-Solutions</b></h1> <p>Tinkuney, Kathmandu, Nepal</p> <p>+977-9877654349</p>
+                <p>Sun to Fri - 10:00-17:00</p>
+        </div>
+            <footer>
+               
+                <p>Copyright © 2024, University of Sunderland, Sudip Basnet</p>
+            </footer>
+        
+            <script src="/static/js/Script.js"></script>
+        </body>
+        </html>

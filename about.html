@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI-Solutions</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body class=babout>
+        <header>
+            <div class="logo">
+                <a href="/"><img src="/static/photos/logo.jpg" alt="AI-Solutions"></a> AI-Solutions
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2 class=our >ABOUT US</h2>
+        <div style="background: red ; height:1050px; opacity:0.5; margin-left:40px; margin-right:40px; width:95%; position:absolute; padding-top:10px;"></div>
+            <section id="about-us" style="position:relative;">
+                {% comment %} mission, vision , goal include  {% endcomment %}
+                <div class="about-content">
+                    <img src="/static/photos/aboutt.jpg" alt="Image">
+                    <p>AI-Solutions, a Sunderland-based start-up, is dedicated to transforming the digital employee experience by integrating advanced AI into workplace systems. 
+                       We help businesses tackle challenges, streamline operations, and foster innovation through AI-powered tools that enhance efficiency and provide actionable insights.  <br>
+
+                        Our commitment to accessibility and affordability ensures organizations of all sizes can leverage cutting-edge technology to unlock their full potential. 
+                        Recognized globally as a trusted partner, we aim to build smarter, more connected workplaces where employees and businesses thrive. 
+                        At AI-Solutions, we are redefining the future of work with a vision for a more innovative and digitally empowered tomorrow.</p>          
+                </div>
+                <div class="write">
+                    <h2>Our Mission</h2>
+                    <p>At the core of our purpose is the mission to empower businesses and individuals by delivering cutting-edge AI solutions. 
+                       Our goal is to drive innovation, enhance operational efficiency, and enable smarter decision-making through the transformative power of artificial intelligence. 
+                       We are committed to embedding ethical and sustainable practices into everything we do, ensuring that our solutions not only meet the needs of today but also contribute positively to the future of society and the planet.</p>
+                    <h2>Our Vision</h2>
+                    <p>Our vision is to become the global leader in AI technology, shaping the future by transforming industries and enhancing lives. 
+                        We aspire to create a world where intelligent systems complement human ingenuity, fostering harmony between technology and humanity. 
+                        By pushing the boundaries of what AI can achieve, we aim to make a profound and lasting impact on how businesses operate and how people live and work.</p>
+                    <h2>Our Goal</h2>
+                    <p>Our goal is to drive continuous innovation by developing cutting-edge AI tools and applications that address real-world challenges across diverse industries.
+                         We aim to deliver tailored solutions that prioritize customer success, ensuring measurable outcomes and maximum satisfaction. 
+                         At the same time, we are committed to upholding ethical AI practices, emphasizing transparency, fairness, and privacy in all our technologies. 
+                         By expanding the accessibility of AI to foster inclusivity and empower underserved communities, we strive to make a global impact. 
+                        Additionally, we integrate sustainability into our processes, minimizing environmental impact and aligning technological advancements with eco-friendly practices to contribute to a better future.</p>
+
+                </div>
+            </section>
+            
+            <section style="display: flex; flex-direction: row; row-gap:130px; margin-left: 230px;" >
+                <div class="gallery" style="row-gap: 10px; ;">
+                    <a href="/gallerys"><img id="gallery" src="/static/photos/gallery.webp" alt="image" width="200" ></a> <br/>
+                    <a href="/gallery"> Gallery </a>
+                </div>
+                <div class="gallery2">
+                    <a href="/events"><img id="gallery1" src="/static/photos/events.jpeg" alt="image" style="height:200px; width:200; mrgin-left:20px" ></a><br/>
+                    <a href="/events"> Events </a>
+                </div>
+                <div class="gallery" style="row-gap: 10px; ;">
+                    <a href="/blog"><img id="gallery" src="/static/photos/Blog.Jpeg" alt="image" width="200" ></a><br/>
+                    <a href="/blog"> Blog </a>
+                </div>
+                <div class="gallery2">
+                    <a href="/portfolio"><img id="gallery1" src="/static/photos/Portfolio.png" alt="image" style="height:200px; width:200; mrgin-left:20px" ></a><br/>
+                    <a href="/portfolio"> Portfolio </a>
+                </div>
+            </section>
+            
+            <h3 style = "background:#ff9696; color:Black; text-align:center; padding:10px; ">Comment</h3>
+            <form id="feedbackForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+
+            <section class= 'testimo'>
+                </div>
+                {% for c in custsData%}
+                <div class= "cust">
+                    <img src="{{c.cust_icon}}" alt="customer" class="testimo_icon">
+                    <h3 class="cust_name">{{c.cust_name}}</h3>
+                    <p class="cust_description">{{c.cust_description}}</p>
+                </div>
+                {% endfor %} 
+            </section> 
+
+            <img id="movable-image" src="/static/photos/chatbot.png" alt="Movable Image" width="200" <button class="chat-button"></button> 
+            <a href="/contact"><img id="movable-cont" src="/static/photos/contact-us-20.png" alt="movable-cont" width="200" <button class="contact-btn"></button></a>  
+            <!-- <div class="chatbot">
+            <button class="chat-button">Chat with us 👋</button>
+            <button class="contact-btn"><a href="./Contact.html">📞</a></button>
+            </div> -->
+        
+            <div class="last">
+                <h1><b>AI-Solutions</b></h1> <p>Tinkuney, Kathmandu, Nepal</p> <p>+977-9877654349</p>
+                <p>Sun to Fri - 10:00-17:00</p>
+            </div>
+        </main>
+            <footer>
+                <p>Copyright © 2024, University of Sunderland, Sudip Basnet</p>
+            </footer>
+
+            <script src="/static/js/Script.js"></script>
+            
+    </body>
+</html>

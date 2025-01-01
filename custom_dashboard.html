@@ -1,0 +1,71 @@
+<!-- templates/admin/custom_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Solutions</title>
+    <link rel="stylesheet" href= "/static/css/custom_admin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <a href="/"><img src="/static/photos/logo.jpg" alt="AI-Solutions"></a> AI-Solutions
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/admin/dashboard">Home</a></li>
+                <li><a href="{% url 'admin:service_cust_changelist' %}">About</a></li>
+                <li><a href="{% url 'admin:service_service_changelist' %}">Services</a></li>
+                <li><a href="{% url 'admin:service_testi_changelist' %}">Testimonials</a></li>
+                <li><a href="{% url 'admin:service_contact_changelist' %}">Contact</a></li>
+                <li><a href="{% url 'admin:service_gall_changelist' %}">Gallery</a></li>
+                <li>
+                    <form action="{% url 'admin:logout' %}" method="post">
+                      {% csrf_token %}
+                      <button type="submit">Logout</button>
+                    </form>
+                  </li>
+            </ul>
+        </nav>
+    </header>
+    <main style =" box-shadow: 1px 1px 1px black; margin:30px ">
+        <h1 style="text-align:center; margin:0.5px; margin-bottom:40px; box-shadow:1px 1px 3px black">{{ title }}</h1>
+        <div class="container">
+            <h1>Weekly Visitor Statistics for AI_Solution</h1>
+            <div class="bar-graph">
+                <div class="bar" style="height: 150px; border:2px solid black;">150</div>
+                <div class="bar" style="height: 200px; border:2px solid black;">200</div>
+                <div class="bar" style="height: 180px; border:2px solid black;">180</div>
+                <div class="bar" style="height: 220px; border:2px solid black;">220</div>
+                <div class="bar" style="height: 300px; border:2px solid black;">300</div>
+                <div class="bar" style="height: 250px; border:2px solid black;">250</div>
+                <div class="bar" style="height: 190px; border:2px solid black;">190</div>
+            </div>
+            <div class="labels">
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+                <span>Sun</span>
+            </div>
+        </div>
+
+    
+        <ul class="dash">
+         <li style ="padding:60px; box-shadow:1px 1px 3px black; background:white; margin:30px; cursor: pointer;">Total number of Contacts: {{ total_contacts }}</li>
+         <li style ="padding:60px; box-shadow:1px 1px 3px black; background:white; margin:30px; cursor: pointer;">Total number of Testimonials: {{ total_testimonials }}</li>
+         <li style ="padding:60px; box-shadow:1px 1px 3px black; background:white; margin:30px; cursor: pointer;">Total number of Services: {{ total_services }}</li>
+         <li style ="padding:60px; box-shadow:1px 1px 3px black; background:white; margin:30px; cursor: pointer;">Total number of Feedback: 7{{ about }}</li>
+
+        </ul>
+        <div>
+            <img src="/static/photos/list.jpg" alt="AI-Solutions" style="height:500px; width:auto; margin-left:150px; margin-right:90px; background:gray;">
+        </div>
+        <!-- Add more custom content here -->
+    </main>
+</body>
+</html>

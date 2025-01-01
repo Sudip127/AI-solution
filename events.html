@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Solutions</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="/static/photos/logo.jpg" alt="AI-Solutions"></a> AI-Solutions
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <h1 class="our">Our Events<h1>
+    <div class="event" style="display: grid; grid-template-columns: repeat(3, 1fr); box-shadow: 1px 1px 2px black; margin:20px;">
+        {% for e in eventsData %}
+        <div class="galery">
+            <a href="https://www.youtube.com/watch?v=S8YVlR_1hlo&ab_channel=CreativityBuzz"> 
+            <img src="{{e.event_icon}}" alt="Person 1" class="event-icon" style="height: 240px;  text-align: justify; margin-top: 22px; margin-left: 15px;">
+            <h3 class="galllery-name" style="margin-left:5px; text-align:center; margin-top: 22px; margin-left: 4px;">{{e.event_name}}</h3></a>
+        </div>
+        {% endfor %}
+    </div>
+      <img id="movable-image" src="/static/photos/chatbot.png" alt="Movable Image" width="200" <button class="chat-button"></button> 
+      <a href="/contact"><img id="movable-cont" src="/static/photos/contact-us-20.png" alt="movable-cont" width="200" <button class="contact-btn"></button></a>  
+      <!-- <div class="chatbot">
+        <button class="chat-button">Chat with us 👋</button>
+        <button class="contact-btn"><a href="./Contact.html">📞</a></button>
+        </div> -->
+</main>
+<div class="last">
+    <h1><b>AI-Solutions</b></h1> <p>Tinkuney, Kathmandu, Nepal</p> <p>+977-9877654349</p>
+        <p>Sun to Fri - 10:00-17:00</p>
+</div>
+    <footer>
+       
+        <p>Copyright © 2024, University of Sunderland, Sudip Basnet</p>
+    </footer>
+
+    <script src="/static/js/Script.js"></script>
+</body>
+</html>
